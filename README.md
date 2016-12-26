@@ -42,7 +42,7 @@ Book.all.last.author
 
 ## Instructions and Demo
  Database *must* be pre-defined as `DBConnection,` including appropriate
- table and column-names, and required by SQLObject.  See [this demo](https://github.com/mikeroess/rORM/blob/master/lib/db_connection.rb) for examples.  
+ table and column-names, and required by SQLObject.  See [this demo db ](https://github.com/mikeroess/rORM/blob/master/lib/db_connection.rb) for examples.  
 
  Any class inheriting from `SQLObject` will respond to:
  `all`, `new`, `find`, and `where` method calls with the results of an appropriate
