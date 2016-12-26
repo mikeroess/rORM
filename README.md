@@ -40,5 +40,18 @@ new_book.save
 Book.all.last.author
 ```
 
-## Demo
-To see rORM's basic features in action `load 'demo.rb'` in your favorite Ruby repl (`pry` maybe?).
+## Instructions and Demo
+ Database *must* be pre-defined as `DBConnection,` including appropriate
+ table and column-names, and required by SQLObject.  See [this demo](https://github.com/mikeroess/rORM/blob/master/lib/db_connection.rb) for examples.  
+
+ Any class inheriting from `SQLObject` will respond to:
+ `all`, `new`, `find`, and `where` method calls with the results of an appropriate
+ database query.  `find` takes an ID parameter; `all` and `where` take a hash of symbols (column names) and values.  
+
+Instances of classes inheriting from `SQLObject` respond to `save` method and will be inserted or updated in database
+as appropriate.  
+
+Associations are defined with `belongs_to`, `has_many`, and `has_one_through`
+methods invoked in class definition.  Through associations one can query the associated class's table for related records.  Association methods take the name of the method to be defined (symbol of associated class's table), an a hash requiring :class_name, :foreign_key, and :primary_key keys.  
+
+Please see demo.rb for examples of this code in action.  An example database has been pre-seeded for this demo, which can be run in your favorite ruby repl.
