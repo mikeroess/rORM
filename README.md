@@ -42,7 +42,7 @@ Book.all.last.author
 
 ## Instructions and Demo
  Database *must* be pre-defined as `DBConnection,` including appropriate
- table and column-names, and required by SQLObject.  See [this demo db ](https://github.com/mikeroess/rORM/blob/master/lib/db_connection.rb) for examples.  
+ table and column-names, and required by SQLObject.  See [this example db ](https://github.com/mikeroess/rORM/blob/master/lib/db_connection.rb) for examples.  
 
  Any class inheriting from `SQLObject` will respond to:
  `all`, `new`, `find`, and `where` method calls with the results of an appropriate
@@ -54,4 +54,4 @@ as appropriate.
 Associations are defined with `belongs_to`, `has_many`, and `has_one_through`
 methods invoked in class definition.  Through associations one can query the associated class's table for related records.  Association methods take the name of the method to be defined (symbol of associated class's table), an a hash requiring :class_name, :foreign_key, and :primary_key keys.  
 
-Please see demo.rb for examples of this code in action.  An example database has been pre-seeded for this demo, which can be run in your favorite ruby repl.
+Please see [demo.rb](https://github.com/mikeroess/rORM/blob/master/demo.rb) for examples of this code in action.  An example database has been supplied for this demo, which can be run in your favorite ruby repl.
