@@ -46,6 +46,10 @@ puts "below, you will see printed the method called, followed by its result."
 puts "NB: save will return the ID of any new record entered into the DB."
 
 puts ""
+puts "initializing database"
+p DBConnection.reset
+
+puts ""
 puts "Book.all:"
 p Book.all
 
