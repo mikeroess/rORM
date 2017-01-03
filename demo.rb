@@ -36,25 +36,41 @@ class Publisher < SQLObject
 	)
 end
 
-puts "Book.all"
+puts "This demo is a simple demonstration of rORM's primary methods."
+puts "It is built atop a simple sqlite3 database with tables for books, publishers, and authors."
+puts "the books.sql file defines the database.  Please look there for questions about its structure."
+puts "For questions about association implementaion, please open this file in a text editor to see the assigned associations."
+
+puts ""
+puts "below, you will see printed the method called, followed by its result."
+puts "NB: save will return the ID of any new record entered into the DB."
+
+puts ""
+puts "Book.all:"
 p Book.all
 
-puts "Book.find(2)"
+puts ""
+puts "Book.find(2):"
 p Book.find(2)
 
-puts "Book.where(title: 'Living Clojure')"
+puts ""
+puts "Book.where(title: 'Living Clojure'):"
 p Book.where(title: 'Living Clojure')
 
-puts "Book.find(1).author"
+puts ""
+puts "Book.find(1).author:"
 p Book.find(1).author
 
-puts "Author.find(4).books"
+puts ""
+puts "Author.find(3).books:"
 p Author.find(3).books
 
-puts "Book.find(1).publisher"
+puts ""
+puts "Book.find(1).publisher:"
 p Book.find(1).publisher
 
+puts ""
 puts "Book.new(title: 'Probabilistic Logics and Probabilistic Networks
-', author_id: 4).save"
+', author_id: 1).save:"
 p Book.new(title: 'Probabilistic Logics and Probabilistic Networks
 ', author_id: 1).save
