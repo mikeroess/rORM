@@ -36,6 +36,14 @@ class Publisher < SQLObject
 	)
 end
 
+puts "initializing database"
+p DBConnection.reset
+
+
+puts ""
+puts ""
+puts ""
+puts ""
 puts "This demo is a simple demonstration of rORM's primary methods."
 puts "It is built atop a simple sqlite3 database with tables for books, publishers, and authors."
 puts "the books.sql file defines the database.  Please look there for questions about its structure."
@@ -45,9 +53,6 @@ puts ""
 puts "below, you will see printed the method called, followed by its result."
 puts "NB: save will return the ID of any new record entered into the DB."
 
-puts ""
-puts "initializing database"
-p DBConnection.reset
 
 puts ""
 puts "Book.all:"
